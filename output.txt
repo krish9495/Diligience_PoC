@@ -1,0 +1,78 @@
+--- Baseline RAG PoC Finished ---
+(Diligence_Poc) PS D:\Diligence_Poc> python .\basic_rag_poc.py
+--- Starting 'non-Cognee' (Baseline RAG) PoC ---
+Step 1: Extracting text from all data sources...
+   Extracting text from PDFs...
+   PDF text extracted.
+   Extracting text from: alpha_fund_data.db...
+   SQL data extracted successfully.
+   Chunking text...
+   Created 23 chunks.
+Step 2: Embedding chunks and creating FAISS index...
+   FAISS index created in memory.
+Step 3: Searching for relevant chunks for question: 'Following the Q2 Phishing Incident reported in Alpha Fund’s SOC 2 compliance summary, what remediation measures were taken, and who from the fund’s management team is responsible for data privacy oversight??'
+
+--- Raw Retrieved Chunks (The 'Before' Demo) ---
+This is what the 'non-Cognee' system found (it's fragmented):
+
+[Chunk 1]:
+ing fees to
+prevent double dipping.
+Conclusion:
+Alpha Fund demonstrates institutional-grade governance, compliance, and ESG integration.
+Its ILPA-aligned framework ensures transparency, accountability, and alignment of interests
+across all stakeholders.
+
+
+Alpha Fund – SOC 2 Type 2 Report (Expanded Condensed Version)
+Purpose and Scope:
+This synthesized SOC 2 Type 2 report summarizes the control environment and operational
+safeguards of Kolide, Inc., the primary service organization supporting Alp
+
+[Chunk 2]:
+tracked through its governance system.
+Planned initiatives for 2025 include automation of incident response workflows, expansion of
+vulnerability detection coverage, and ISO 27001 certification alignment.
+Conclusion:
+Kolide, Inc. maintains an effective control environment that provides reasonable assurance
+that system objectives were achieved. The SOC 2 Type 2 audit validates Alpha Fund’s
+reliance on Kolide’s infrastructure as secure, compliant, and aligned with AICPA Trust
+Services Criteria.
+
+[Chunk 3]:
+., the primary service organization supporting Alpha Fund’s IT and
+data infrastructure. The audit, conducted by Prescient Assurance, covered the six-month
+period from January 1 to June 30, 2024, and evaluated controls under the Trust Services
+Criteria for Security.
+1. Management Assertion:
+Kolide’s management asserts that the system was appropriately designed, implemented, and
+operated effectively to meet its service commitments related to data protection, confidentiality,
+and system availabilit
+
+[Chunk 4]:
+pliance Committee to oversee
+financial, operational, cyber, and reputational risks. The firm adheres to all relevant SEC and
+AML regulations. Policies include anti-bribery, data protection, whistleblower, and conflict of
+interest management. Risk registers are updated semi-annually, and independent audits are
+conducted to test the adequacy of internal controls.
+Cybersecurity measures are maintained in alignment with SOC 2 and ISO 27001 standards.
+Business continuity and disaster recovery plans a
+
+--- Baseline RAG Search Results ---
+Step 4: Stuffing chunks into Gemini prompt...
+The context provided does not contain information about a Q2 Phishing Incident or its remediation measures. Additionally, it does not specify who from Alpha Fund's management team is responsible for data privacy oversight. The context states that Kolide's management asserts the system was designed and operated effectively to meet service commitments related to data protection, and Alpha Fund adheres to data protection policies, but it does not name a specific individual or team from Alpha Fund for privacy oversight.
+
+--- Baseline RAG PoC Finished ---
+
+--- Cognee Search Results ---
+The provided SOC 2 compliance summary does not report a Q2 Phishing Incident or any specific remediation measures related to such an incident, stating instead that no significant control deficiencies were identified and all controls tested were found to be operating effectively. Raj Singh, a Data Privacy Analyst at Alpha Fund, is responsible for data privacy oversight.
+
+--- Cognee PoC Finished ---
+(Diligence_Poc) PS D:\Diligence_Poc> 
+
+
+🧩 Why Cognee Outperforms Baseline RAG
+
+Unlike a traditional RAG pipeline that retrieves only from unstructured text, Cognee unifies information across documents, databases, and knowledge graphs.
+In this example, while RAG failed to link Alpha Fund’s SOC 2 report with its internal management data, Cognee successfully correlated both sources — recognizing that no remediation was required and identifying Raj Singh as the Data Privacy Analyst.
+This demonstrates Cognee’s ability to deliver contextually complete, cross-domain answers, essential for enterprise diligence, audit, and compliance workflows.
