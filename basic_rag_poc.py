@@ -100,7 +100,6 @@ def run_baseline_rag():
     
     if not corpus.strip():
         print("ERROR: No text was extracted from data files. Exiting.")
-        print("Please run 'setup_data.py' first.")
         return
 
     # --- 2. Chunk Text ---
@@ -127,10 +126,10 @@ def run_baseline_rag():
 
     retrieved_chunks = [chunks[i] for i in I[0]]
     
-    print("\n--- Raw Retrieved Chunks (The 'Before' Demo) ---")
-    print("This is what the 'non-Cognee' system found (it's fragmented):")
-    for i, chunk in enumerate(retrieved_chunks):
-        print(f"\n[Chunk {i+1}]:\n{chunk.strip()}")
+    # print("\n--- Raw Retrieved Chunks (The 'Before' Demo) ---")
+    # print("This is what the 'non-Cognee' system found")
+    # for i, chunk in enumerate(retrieved_chunks):
+    #     print(f"\n[Chunk {i+1}]:\n{chunk.strip()}")
     
     # --- 5. Generate Response ---
     print("\n--- Baseline RAG Search Results ---")
