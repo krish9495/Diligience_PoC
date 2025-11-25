@@ -107,6 +107,7 @@ The UI provides complete demonstration of RBAC enforcement.
 ---
 
 #  Project Structure (Updated)
+```
 Diligence_PoC/
 ├── rbac_poc.py             # NEW — Full RBAC backend implementation
 ├── app.py                  # NEW — Streamlit UI for RBAC demo
@@ -118,19 +119,28 @@ Diligence_PoC/
 ├── alpha/alpha_ddq.pdf
 ├── beta/BetaFund_DDQ.pdf
 
+
+
+
+```
+
 ---
 
 # 🚀 Running the RBAC Demo
 
 ### 1️ Install dependencies
+```
 pip install -r requirements.txt
-
+```
 ### 2️ Add API key in .env
+```
 LLM_API_KEY=your_gemini_api_key
 ENABLE_BACKEND_ACCESS_CONTROL="True"
-
+```
 ### 3️ Run the Streamlit UI
+```
 streamlit run app.py
+```
 
 This repository now supports *two separate PoCs*:
 
@@ -140,7 +150,7 @@ This repository now supports *two separate PoCs*:
 
 
 
-# Due Diligence RAG PoC
+# Due Diligence RAG PoC (Previous POC)
 
 This project demonstrates the improvement in LLM responses using Cognee's knowledge graph approach compared to traditional RAG (Retrieval-Augmented Generation) implementation for due diligence processes.
 
